@@ -47,7 +47,9 @@
     "when": "~3.4.4",
     "winston": "^0.8.3",
     "winston-elasticsearch": "^0.1.1",
-    "winston-splunk": "^0.1.0"
+    "winston-splunk": "^0.1.0",
+
+    "lwm2m-node-lib": "*"
   },
   "optionalDependencies": {
     "airbrake": "^0.3.8",

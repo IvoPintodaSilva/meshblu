@@ -25,6 +25,7 @@ program
   // .option('--mqtt-port <n>', 'Set the MQTT port (defaults to 1883)')
   // .option('--coap-port <n>', 'Set the CoAP port (defaults to 5683)')
   .option('--coap', 'Enable CoAP server (defaults to false)')
+  .option('--lwm2m', 'Enable LwM2M server (defaults to false)')
   .option('--http', 'Enable HTTP server (defaults to false)')
   .option('--https', 'Enable HTTPS server (defaults to false)')
   .option('--mdns', 'Enable Multicast DNS (defaults to false)')
@@ -38,6 +39,7 @@ program.environment = program.environment || process.env.NODE_ENV || 'developmen
 // program.httpPort    = program.httpPort || 3000;
 // program.httpsPort   = program.httpsPort || 4000;
 // program.mqttPort    = program.mqttPort || 1883;
+program.lwm2m       = program.lwm2m || false;
 program.coap        = program.coap || false;
 program.http        = program.http || false;
 program.https       = program.https || false;
@@ -68,6 +70,27 @@ if (process.env.AIRBRAKE_KEY) {
 if (program.parent) {
   process.stdout.write('Starting Parent connection...');
   parentConnection = require('./lib/parentConnection')(config);
+  console.log(' done.');
+}
+
+function handleResult(message) {
+    return function(error) {
+        if (error) {
+            clUtils.handleError(error);
+        } else {
+            console.log('\nSuccess: %s\n', message);
+            clUtils.prompt();
+        }
+    };
+}
+
+if (program.lwm2m) {
+  var lwtm2m = require('lwm2m-node-lib').server;
+  process.stdout.write('Starting LwM2M...');
+  lwtm2m.start(config.lwm2m, function (error, srvInfo) {
+    console.log("LwM2M server listening in port " + config.lwm2m.port);
+  });
+
   console.log(' done.');
 }
 
