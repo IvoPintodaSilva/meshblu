@@ -2597,7 +2597,7 @@
     "resourcedefs": [
       {
         "id": 7101,
-        "name": "Name",
+        "name": "name",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2608,7 +2608,18 @@
       },
       {
         "id": 7102,
-        "name": "Device type",
+        "name": "devices",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "devices should be \"WATER_TARGET_UUID\""
+      },
+      {
+        "id": 7103,
+        "name": "device_type",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2618,8 +2629,8 @@
         "description": "The type of the device that's sending the message"
       },
       {
-        "id": 7103,
-        "name": "Water Flow",
+        "id": 7104,
+        "name": "water_flow",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2640,7 +2651,7 @@
     "resourcedefs": [
       {
         "id": 7201,
-        "name": "Name",
+        "name": "name",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2651,7 +2662,18 @@
       },
       {
         "id": 7202,
-        "name": "Device type",
+        "name": "devices",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "devices should be \"AIR_TARGET_UUID\""
+      },
+      {
+        "id": 7203,
+        "name": "device_type",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2661,8 +2683,8 @@
         "description": "The type of the device that's sending the message"
       },
       {
-        "id": 7203,
-        "name": "Temperature",
+        "id": 7204,
+        "name": "temperature",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2672,8 +2694,8 @@
         "description": "Temperature measurement"
       },
       {
-        "id": 7204,
-        "name": "Precipitation",
+        "id": 7205,
+        "name": "precipitation",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2683,8 +2705,8 @@
         "description": "Precipitation measurement"
       },
       {
-        "id": 7205,
-        "name": "Noise Level",
+        "id": 7206,
+        "name": "noise_level",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2694,8 +2716,8 @@
         "description": "Noise level measurement"
       },
       {
-        "id": 7206,
-        "name": "Particles",
+        "id": 7207,
+        "name": "particles",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2705,19 +2727,8 @@
         "description": "Particles measurement"
       },
       {
-        "id": 7207,
-        "name": "Carbon Dioxide",
-        "operations": "R",
-        "instancetype": "single",
-        "mandatory": true,
-        "type": "integer",
-        "range": "",
-        "units": "",
-        "description": "Carbon Dioxide measurement"
-      },
-      {
         "id": 7208,
-        "name": "Ozone",
+        "name": "carbon_dioxide",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2728,7 +2739,18 @@
       },
       {
         "id": 7209,
-        "name": "Humidity",
+        "name": "ozone",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "integer",
+        "range": "",
+        "units": "",
+        "description": "Carbon Dioxide measurement"
+      },
+      {
+        "id": 7210,
+        "name": "humidity",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2738,8 +2760,8 @@
         "description": "Humidity measurement"
       },
       {
-        "id": 7210,
-        "name": "Wind Speed",
+        "id": 7211,
+        "name": "wind_speed",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2749,8 +2771,8 @@
         "description": "Wind Speed measurement"
       },
       {
-        "id": 7211,
-        "name": "Light",
+        "id": 7212,
+        "name": "light",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2760,8 +2782,8 @@
         "description": "Light measurement"
       },
       {
-        "id": 7212,
-        "name": "Solar Radiation",
+        "id": 7213,
+        "name": "solar_radiation",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2771,8 +2793,8 @@
         "description": "Solar Radiation measurement"
       },
       {
-        "id": 7213,
-        "name": "Carbon monoxide",
+        "id": 7214,
+        "name": "carbon_monoxide",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2782,8 +2804,8 @@
         "description": "Carbon monoxide measurement"
       },
       {
-        "id": 7214,
-        "name": "Nitrogen Dioxide",
+        "id": 7215,
+        "name": "nitrogen_dioxide",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2793,8 +2815,8 @@
         "description": "Nitrogen Dioxide measurement"
       },
       {
-        "id": 7215,
-        "name": "Vocs",
+        "id": 7216,
+        "name": "vocs",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2808,7 +2830,7 @@
 
 
   {
-    "name": "Citibrain Waste",
+    "name": "waste_event",
     "id": 7300,
     "instancetype": "multiple",
     "mandatory": false,
@@ -2816,7 +2838,7 @@
     "resourcedefs": [
       {
         "id": 7301,
-        "name": "Name",
+        "name": "name",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2827,7 +2849,18 @@
       },
       {
         "id": 7302,
-        "name": "Device type",
+        "name": "devices",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "devices type should be \"736421b0-e6a2-11e4-9715-7535251c3282\""
+      },
+      {
+        "id": 7303,
+        "name": "device_type",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2837,8 +2870,8 @@
         "description": "The type of the device that's sending the message"
       },
       {
-        "id": 7303,
-        "name": "Status",
+        "id": 7304,
+        "name": "status",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2848,8 +2881,8 @@
         "description": "Status of the sensor"
       },
       {
-        "id": 7304,
-        "name": "Distance",
+        "id": 7305,
+        "name": "distance",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2859,8 +2892,8 @@
         "description": "Distance to full"
       },
       {
-        "id": 7305,
-        "name": "Temperature",
+        "id": 7306,
+        "name": "temperature",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2870,8 +2903,8 @@
         "description": "Temperature of the sensor"
       },
       {
-        "id": 7306,
-        "name": "Movement detected",
+        "id": 7307,
+        "name": "movement_detected",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2892,7 +2925,7 @@
     "resourcedefs": [
       {
         "id": 7401,
-        "name": "Name",
+        "name": "name",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2903,7 +2936,18 @@
       },
       {
         "id": 7402,
-        "name": "Device type",
+        "name": "devices",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "devices should be \"9200a7e0-dc6d-11e4-a012-afc5f5d5d1f8\""
+      },
+      {
+        "id": 7403,
+        "name": "device_type",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2913,8 +2957,8 @@
         "description": "The type of the device that's sending the message"
       },
       {
-        "id": 7403,
-        "name": "Status",
+        "id": 7404,
+        "name": "status",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2936,7 +2980,7 @@
     "resourcedefs": [
       {
         "id": 7501,
-        "name": "Name",
+        "name": "name",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2947,7 +2991,18 @@
       },
       {
         "id": 7502,
-        "name": "Device type",
+        "name": "devices",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "devices should be df5b2380-7a4d-11e4-bff6-ffd7eef4967c"
+      },
+      {
+        "id": 7503,
+        "name": "device_type",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2957,8 +3012,8 @@
         "description": "The type of the device that's sending the message"
       },
       {
-        "id": 7503,
-        "name": "Status",
+        "id": 7504,
+        "name": "status",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2981,7 +3036,7 @@
     "resourcedefs": [
       {
         "id": 7601,
-        "name": "Name",
+        "name": "name",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -2992,7 +3047,18 @@
       },
       {
         "id": 7602,
-        "name": "Device type",
+        "name": "devices",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "devices should be \"df5b2380-7a4d-11e4-bff6-ffd7eef4967c\""
+      },
+      {
+        "id": 7603,
+        "name": "device_type",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -3002,7 +3068,7 @@
         "description": "The type of the device that's sending the message"
       },
       {
-        "id": 7603,
+        "id": 7604,
         "name": "uuid_one",
         "operations": "R",
         "instancetype": "single",
@@ -3013,8 +3079,8 @@
         "description": "uuid to detect parking spot"
       },
       {
-        "id": 7604,
-        "name": "Value of uuid_one",
+        "id": 7605,
+        "name": "val_uuid_one",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -3024,7 +3090,7 @@
         "description": "value of uuid_one to detect parking spot"
       },
       {
-        "id": 7605,
+        "id": 7606,
         "name": "uuid_two",
         "operations": "R",
         "instancetype": "single",
@@ -3035,8 +3101,8 @@
         "description": "uuid to detect parking spot"
       },
       {
-        "id": 7606,
-        "name": "Value of uuid_two",
+        "id": 7607,
+        "name": "val_uuid_two",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -3046,7 +3112,7 @@
         "description": "value of uuid_two to detect parking spot"
       },
       {
-        "id": 7607,
+        "id": 7608,
         "name": "uuid_three",
         "operations": "R",
         "instancetype": "single",
@@ -3057,8 +3123,8 @@
         "description": "uuid to detect parking spot"
       },
       {
-        "id": 7608,
-        "name": "Value of uuid_three",
+        "id": 7609,
+        "name": "val_uuid_three",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
@@ -3068,7 +3134,7 @@
         "description": "value of uuid_three to detect parking spot"
       },
       {
-        "id": 7609,
+        "id": 7610,
         "name": "uuid_four",
         "operations": "R",
         "instancetype": "single",
@@ -3079,8 +3145,8 @@
         "description": "uuid to detect parking spot"
       },
       {
-        "id": 7610,
-        "name": "Value of uuid_four",
+        "id": 7611,
+        "name": "val_uuid_four",
         "operations": "R",
         "instancetype": "single",
         "mandatory": true,
