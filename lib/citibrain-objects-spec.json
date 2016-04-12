@@ -2566,7 +2566,25 @@
 
 
 
-
+  {
+    "name": "Meshblu auth",
+    "id": 6999,
+    "instancetype": "multiple",
+    "mandatory": false,
+    "description": "Description: Citibrain's water leakage message spec",
+    "resourcedefs": [
+      {
+        "id": 1,
+        "name": "token",
+        "operations": "R",
+        "instancetype": "single",
+        "mandatory": true,
+        "type": "string",
+        "range": "",
+        "units": "",
+        "description": "Meshblu's authentication token"
+      }]
+  },
 
   {
     "name": "Citibrain Event",
